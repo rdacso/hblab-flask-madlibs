@@ -47,11 +47,26 @@ def show_madlib_form():
 
 @app.route('/madlib')
 def show_madlib():
-    noun = request.args.get('noun')
-    verb = request.args.get('verb')
     adjective = request.args.get('adjective')
+    verbed = request.args.get('verbed')
+    nounp = request.args.get('nounp')
+    famousperson = request.args.get('famousperson')
+    place = request.args.get('place')
+    occupation = request.args.get('occupation')
+    noun = request.args.get('noun')
+    nationality = request.args.get('nationality')
+    femalecelebrity = request.args.get('femalecelebrity')
+    noun1 = request.args.get('noun1')
+    femalefriend = request.args.get('femalefriend')
+    nounp1 = request.args.get('nounp1')
+    number = request.args.get('number')
+    adjective1 = request.args.get('adjective1')
+
      
-    return render_template('gameplay.html', noun=noun,adjective=adjective, verb=verb)
+    return render_template('gameplay.html', adjective=adjective, verbed=verbed,
+    nounp=nounp, famousperson=famousperson, place=place, occupation=occupation,
+    noun=noun, nationality=nationality, femalecelebrity=femalecelebrity, noun1=noun1,
+    femalefriend=femalefriend, nounp1=nounp1, number=number, adjective1=adjective1)
 
    
 
