@@ -45,7 +45,15 @@ def show_madlib_form():
         return render_template("goodbye.html")
     
 
+@app.route('/madlib')
+def show_madlib():
+    noun = request.args.get('noun')
+    verb = request.args.get('verb')
+    adjective = request.args.get('adjective')
+     
+    return render_template('gameplay.html', noun=noun,adjective=adjective, verb=verb)
 
+   
 
 if __name__ == '__main__':
     # debug=True gives us error messages in the browser and also "reloads" our web app
